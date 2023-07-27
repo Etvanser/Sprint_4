@@ -2,6 +2,7 @@ import pytest
 from selenium import webdriver
 from pages.order_page import OrderPage
 
+
 # Фикстура драйвера FireFox
 @pytest.fixture(scope="module")
 def driver():
@@ -9,6 +10,7 @@ def driver():
     driver.maximize_window()
     yield driver
     driver.quit()
+
 
 # Фикстура заполнения формы №1
 @pytest.fixture
@@ -24,9 +26,3 @@ def auto_input_form1(driver):
     page.input_phone_form_order('+79174005566')
     page.click_button_next()
     yield page
-
-
-
-
-
-

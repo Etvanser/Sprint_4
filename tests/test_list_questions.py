@@ -85,7 +85,3 @@ class TestClickQuestions:
         list_questions.click_question_8()
         list_questions.waiting(LocatorsList.QUESTION_8_DROP)
         list_questions.check_text_question_8()
-
-
-
-
