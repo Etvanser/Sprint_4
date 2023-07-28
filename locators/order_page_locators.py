@@ -28,23 +28,7 @@ class OrderPageForm2Locators:
     ORDER_BUTTON = By.XPATH, ".//button[@class='Button_Button__ra12g Button_Middle__1CSJM' and contains(text(),'Заказать')]"  # Кнопка Заказать
     ORDER_BUTTON_YES = By.XPATH, ".//button[contains(text(),'Да')]"  # Кнопка ДА
     FINAL_ORDER_WINDOW = By.XPATH, ".//div[contains(text(),'Заказ оформлен')]"  # Заголовок Финального окна о завершении заказа
+    COLOUR_BLACK = By.ID, 'black'
+    COLOUR_GREY = By.ID, 'grey'
 
-
-# Функция выбора переода аренды
-def drop_menu_period(time_period):
-    return By.XPATH, f".//div[@role='option' and contains(text(), '{time_period}')]"
-
-
-# Функция выбора даты
-def click_date(date):
-    date = date.split('.')[0]
-    return By.XPATH, f".//div[contains(@aria-label, '{date}-е')]"
-
-
-# Функция выбора цвета
-def colour(colour_scooter):
-    if colour_scooter == 'чёрный жемчуг':
-        return By.ID, 'black'
-    elif colour_scooter == 'серая безысходность':
-        return By.ID, 'grey'
 
